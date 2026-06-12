@@ -1,0 +1,8 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//fitness24-calendar//fitness24 selected classes//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:FITNESS 24 Приморский — выбранные занятия
+X-WR-TIMEZONE:Europe/Moscow
+END:VCALENDAR
