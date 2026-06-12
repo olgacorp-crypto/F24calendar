@@ -15,6 +15,8 @@ from zoneinfo import ZoneInfo
 
 import requests
 from urllib3.util import connection as urllib3_connection
+import yaml
+from bs4 import BeautifulSoup
 
 
 def force_ipv4_for_requests() -> None:
@@ -22,8 +24,6 @@ def force_ipv4_for_requests() -> None:
 
 
 force_ipv4_for_requests()
-import yaml
-from bs4 import BeautifulSoup
 
 RU_MONTHS = {
     "января": 1,
@@ -417,7 +417,7 @@ def main() -> int:
 
     config_path = Path(args.config)
     config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
-       raw_events = get_candidate_events(config)
+    raw_events = get_candidate_events(config)
     events = filter_events(raw_events, config)
 
     if not raw_events:
