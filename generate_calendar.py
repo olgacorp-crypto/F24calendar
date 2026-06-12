@@ -4,8 +4,9 @@ import argparse
 import datetime as dt
 import hashlib
 import re
-import sys
 import socket
+import sys
+import time
 import unicodedata
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -14,11 +15,13 @@ from urllib.parse import urlencode
 from zoneinfo import ZoneInfo
 
 import requests
-from urllib3.util import connection as urllib3_connection
 import yaml
 from bs4 import BeautifulSoup
+from urllib3.util import connection as urllib3_connection
 
 
+# GitHub Actions sometimes reaches Russian sites through a route that breaks on IPv6.
+# For this small script it is safer to force requests/urllib3 to use IPv4.
 def force_ipv4_for_requests() -> None:
     urllib3_connection.allowed_gai_family = lambda: socket.AF_INET
 
@@ -64,6 +67,7 @@ def normalize(value: str) -> str:
     value = unicodedata.normalize("NFKC", value)
     value = value.replace("ё", "е").replace("Ё", "Е")
     value = value.replace("«", '"').replace("»", '"').replace("“", '"').replace("”", '"')
+    value = value.replace("\u00a0", " ")
     value = re.sub(r"\s+", " ", value.upper()).strip()
     return value
 
@@ -114,7 +118,11 @@ def extract_title(line: str, allowed_titles: list[str]) -> str | None:
     nline = normalize(line)
     for title in sorted(allowed_titles, key=lambda x: len(normalize(x)), reverse=True):
         for variant in sorted(target_variants(title), key=len, reverse=True):
+            variant_no_quotes = variant.replace('"', "")
+            nline_no_quotes = nline.replace('"', "")
             if nline == variant or nline.startswith(variant + " "):
+                return title
+            if nline_no_quotes == variant_no_quotes or nline_no_quotes.startswith(variant_no_quotes + " "):
                 return title
     return None
 
@@ -129,16 +137,22 @@ def extract_location(line: str) -> str:
 
 def extract_trainer(block_lines: list[str]) -> str:
     for line in block_lines:
-        if "Инструктор" in line:
-            m = re.match(r"(.+?)\s+Инструктор\b", line)
-            if m:
-                return re.sub(r"\s+", " ", m.group(1)).strip()
+        if "Инструктор" not in line:
+            continue
+        cleaned = re.sub(r"\s+", " ", line).strip()
+        # Common format: "Дарья Середа Инструктор групповых программ".
+        m = re.match(r"(.+?)\s+Инструктор\b", cleaned)
+        if m:
+            name = m.group(1).strip()
+            # Remove common image/accessibility leftovers if they appear in extracted text.
+            name = re.sub(r"^(Image:?\s*)+", "", name, flags=re.IGNORECASE).strip()
+            return name
     return ""
 
 
 def closest_date(day: int, month: int, week_start: dt.date | None, fallback_year: int) -> dt.date:
     years = [fallback_year - 1, fallback_year, fallback_year + 1]
-    candidates = []
+    candidates: list[tuple[int, dt.date]] = []
     for year in years:
         try:
             candidate = dt.date(year, month, day)
@@ -156,17 +170,17 @@ def clean_text_lines(html: str) -> list[str]:
     soup = BeautifulSoup(html, "html.parser")
     for tag in soup(["script", "style", "noscript"]):
         tag.decompose()
-    lines = []
+    lines: list[str] = []
     for line in soup.get_text("\n").splitlines():
-        line = re.sub(r"\s+", " ", line).strip()
+        line = re.sub(r"\s+", " ", line.replace("\u00a0", " ")).strip()
         if line:
             lines.append(line)
     return lines
 
 
 def parse_week_ranges(lines: list[str]) -> list[tuple[dt.date, dt.date]]:
-    ranges = []
-    joined = "\n".join(lines[:200])
+    ranges: list[tuple[dt.date, dt.date]] = []
+    joined = "\n".join(lines[:300])
     for m in WEEK_RANGE_RE.finditer(joined):
         start = dt.date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
         end = dt.date(int(m.group(6)), int(m.group(5)), int(m.group(4)))
@@ -212,7 +226,9 @@ def parse_events(html: str, allowed_titles: list[str], week_start: dt.date | Non
 
         title_line = ""
         title = None
-        for candidate in block[1:6]:
+        # The site usually places the title immediately after time, but the detailed card may
+        # add icon text. Checking the first few lines makes the parser tolerant to that.
+        for candidate in block[1:10]:
             title = extract_title(candidate, allowed_titles)
             if title:
                 title_line = candidate
@@ -254,25 +270,83 @@ def week_start_for(date_value: dt.date) -> dt.date:
 
 def candidate_urls(base_url: str, week_start: dt.date) -> list[str]:
     iso = week_start.isocalendar()
-    # The site has been observed using date=YYYY-WW in the query string.
     week_code = f"{iso.year}-{iso.week:02d}"
-    midday = dt.datetime.combine(week_start + dt.timedelta(days=2), dt.time(12, 0), tzinfo=ZoneInfo("Europe/Moscow"))
-    timestamp = int(midday.timestamp())
-    return [
+
+    tz = ZoneInfo("Europe/Moscow")
+    timestamp_points = [
+        dt.datetime.combine(week_start, dt.time(12, 0), tzinfo=tz),
+        dt.datetime.combine(week_start + dt.timedelta(days=2), dt.time(12, 0), tzinfo=tz),
+        dt.datetime.combine(week_start + dt.timedelta(days=2), dt.time(23, 26, 17), tzinfo=tz),
+        dt.datetime.combine(week_start + dt.timedelta(days=6), dt.time(12, 0), tzinfo=tz),
+    ]
+    timestamps = [int(point.timestamp()) for point in timestamp_points]
+
+    urls = [
         base_url,
         base_url + "?" + urlencode({"date": week_code}),
-        base_url + f"?date={timestamp}&date={week_code}",
     ]
+    for timestamp in timestamps:
+        urls.append(base_url + f"?date={timestamp}&date={week_code}")
+    return urls
 
 
 def fetch(url: str) -> str:
     headers = {
-        "User-Agent": "Mozilla/5.0 (compatible; fitness24-calendar/1.0; +https://github.com/)",
-        "Accept-Language": "ru,en;q=0.8",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "ru-RU,ru;q=0.9,en;q=0.8",
+        "Cache-Control": "no-cache",
     }
-    response = requests.get(url, headers=headers, timeout=30)
-    response.raise_for_status()
-    return response.text
+    last_exc: Exception | None = None
+    for attempt in range(1, 4):
+        try:
+            response = requests.get(url, headers=headers, timeout=30)
+            response.raise_for_status()
+            return response.text
+        except Exception as exc:  # noqa: BLE001 - keep diagnostics readable in Actions logs.
+            last_exc = exc
+            if attempt < 3:
+                time.sleep(2 * attempt)
+    assert last_exc is not None
+    raise last_exc
+
+
+def compact_preview(text: str, limit: int = 900) -> str:
+    text = re.sub(r"\s+", " ", text).strip()
+    return text[:limit]
+
+
+def print_fetch_diagnostics(url: str, html: str, allowed_titles: list[str], week_start: dt.date) -> None:
+    lines = clean_text_lines(html)
+    norm_html = normalize(html)
+    ranges = parse_week_ranges(lines)
+    title_hits = [title for title in allowed_titles if normalize(title).replace('"', "") in norm_html.replace('"', "")]
+    day_count = sum(1 for line in lines if DAY_RE.match(line))
+    time_count = sum(1 for line in lines if TIME_RE.match(line))
+
+    print(f"FETCHED: {url}")
+    print(f"Week requested: {week_start.isoformat()} - {(week_start + dt.timedelta(days=6)).isoformat()}")
+    print(f"HTML length: {len(html)}; text lines: {len(lines)}; day headings: {day_count}; time rows: {time_count}")
+    print("Week ranges on page: " + (", ".join(f"{a.isoformat()}..{b.isoformat()}" for a, b in ranges[:6]) or "none"))
+    print("Target title words found in raw page: " + (", ".join(title_hits) or "none"))
+
+    interesting: list[str] = []
+    allowed_norms = [normalize(title).replace('"', "") for title in allowed_titles]
+    for index, line in enumerate(lines):
+        nline = normalize(line).replace('"', "")
+        if any(title_norm in nline for title_norm in allowed_norms):
+            start = max(index - 2, 0)
+            end = min(index + 4, len(lines))
+            interesting.append(" | ".join(lines[start:end]))
+            if len(interesting) >= 5:
+                break
+    if interesting:
+        print("Target context preview:")
+        for item in interesting:
+            print(f"  {compact_preview(item, 500)}")
+    else:
+        print("Page text preview: " + compact_preview(" | ".join(lines[:80]), 1200))
 
 
 def get_candidate_events(config: dict) -> list[Event]:
@@ -282,9 +356,11 @@ def get_candidate_events(config: dict) -> list[Event]:
     current_week = week_start_for(today)
     lookahead = int(config.get("lookahead_weeks", 2))
     desired_weeks = [current_week + dt.timedelta(days=7 * offset) for offset in range(lookahead)]
+    debug = bool(config.get("debug", True))
 
     all_events: dict[tuple[str, str, str], Event] = {}
     seen_urls: set[str] = set()
+    successful_fetches = 0
 
     for week_start in desired_weeks:
         for url in candidate_urls(base_url, week_start):
@@ -293,27 +369,66 @@ def get_candidate_events(config: dict) -> list[Event]:
             seen_urls.add(url)
             try:
                 html = fetch(url)
-            except Exception as exc:
+            except Exception as exc:  # noqa: BLE001 - readable Actions log is more useful here.
                 print(f"WARN: could not fetch {url}: {exc}", file=sys.stderr)
                 continue
-            events = parse_events(html, allowed_titles, week_start=week_start)
-            for event in events:
-                all_events.setdefault(event.key, event).merge(event)
 
+            successful_fetches += 1
+            events = parse_events(html, allowed_titles, week_start=week_start)
+
+            if debug:
+                print_fetch_diagnostics(url, html, allowed_titles, week_start)
+                print(f"Parsed target-title events from this URL: {len(events)}")
+                for event in events[:20]:
+                    flags = []
+                    if event.cancelled:
+                        flags.append("cancelled")
+                    if event.paid:
+                        flags.append("paid")
+                    if event.child_or_youth:
+                        flags.append("child/youth")
+                    if event.adult:
+                        flags.append("adult")
+                    print(
+                        f"  parsed: {event.date} {event.hour:02d}:{event.minute:02d} "
+                        f"{event.title} [{', '.join(flags) or 'no flags'}]"
+                    )
+
+            for event in events:
+                existing = all_events.get(event.key)
+                if existing:
+                    existing.merge(event)
+                else:
+                    all_events[event.key] = event
+
+    print(f"Successful fetches: {successful_fetches}; total unique target-title events before filters: {len(all_events)}")
     return sorted(all_events.values(), key=lambda e: (e.date, e.hour, e.minute, e.title))
 
 
 def filter_events(events: Iterable[Event], config: dict) -> list[Event]:
     exclude = config.get("exclude", {})
-    filtered = []
+    filtered: list[Event] = []
+    skipped: list[tuple[Event, str]] = []
+
     for event in events:
+        reasons: list[str] = []
         if exclude.get("cancelled", True) and event.cancelled:
-            continue
+            reasons.append("cancelled")
         if exclude.get("paid", True) and event.paid:
-            continue
+            reasons.append("paid")
         if exclude.get("children", True) and (event.child_or_youth or not event.adult):
-            continue
-        filtered.append(event)
+            reasons.append("children/non-adult")
+
+        if reasons:
+            skipped.append((event, ", ".join(reasons)))
+        else:
+            filtered.append(event)
+
+    if skipped:
+        print("Skipped by filters:")
+        for event, reason in skipped[:50]:
+            print(f"- {event.date} {event.hour:02d}:{event.minute:02d} {event.title}: {reason}")
+
     return filtered
 
 
@@ -364,7 +479,7 @@ def build_ics(events: list[Event], config: dict) -> str:
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
         f"X-WR-CALNAME:{ics_escape(config.get('calendar_name', club_name))}",
-        "X-WR-TIMEZONE:Europe/Moscow",
+        f"X-WR-TIMEZONE:{ics_escape(config.get('club_timezone', 'Europe/Moscow'))}",
     ]
 
     for event in events:
@@ -373,7 +488,7 @@ def build_ics(events: list[Event], config: dict) -> str:
         start_local = start_naive.replace(tzinfo=tz)
         end_local = end_naive.replace(tzinfo=tz)
 
-        description_parts = [f"{club_name}"]
+        description_parts = [club_name]
         if event.trainer:
             description_parts.append(f"Тренер: {event.trainer}")
         if event.location:
@@ -381,15 +496,17 @@ def build_ics(events: list[Event], config: dict) -> str:
         description_parts.append(f"Источник: {source_url}")
         description = "\n".join(description_parts)
 
-        lines.extend([
-            "BEGIN:VEVENT",
-            f"UID:{event_uid(event, club_name)}",
-            f"DTSTAMP:{now}",
-            f"SUMMARY:{ics_escape(event.title)}",
-            f"LOCATION:{ics_escape(event.location or club_name)}",
-            f"DESCRIPTION:{ics_escape(description)}",
-            f"URL:{ics_escape(source_url)}",
-        ])
+        lines.extend(
+            [
+                "BEGIN:VEVENT",
+                f"UID:{event_uid(event, club_name)}",
+                f"DTSTAMP:{now}",
+                f"SUMMARY:{ics_escape(event.title)}",
+                f"LOCATION:{ics_escape(event.location or club_name)}",
+                f"DESCRIPTION:{ics_escape(description)}",
+                f"URL:{ics_escape(source_url)}",
+            ]
+        )
         if floating:
             lines.append(f"DTSTART:{start_naive.strftime('%Y%m%dT%H%M%S')}")
             lines.append(f"DTEND:{end_naive.strftime('%Y%m%dT%H%M%S')}")
@@ -397,13 +514,15 @@ def build_ics(events: list[Event], config: dict) -> str:
             lines.append(f"DTSTART:{fmt_utc(start_local)}")
             lines.append(f"DTEND:{fmt_utc(end_local)}")
         if reminder_hours > 0:
-            lines.extend([
-                "BEGIN:VALARM",
-                "ACTION:DISPLAY",
-                f"DESCRIPTION:{ics_escape(event.title)}",
-                f"TRIGGER:-PT{reminder_hours}H",
-                "END:VALARM",
-            ])
+            lines.extend(
+                [
+                    "BEGIN:VALARM",
+                    "ACTION:DISPLAY",
+                    f"DESCRIPTION:{ics_escape(event.title)}",
+                    f"TRIGGER:-PT{reminder_hours}H",
+                    "END:VALARM",
+                ]
+            )
         lines.append("END:VEVENT")
 
     lines.append("END:VCALENDAR")
@@ -417,11 +536,16 @@ def main() -> int:
 
     config_path = Path(args.config)
     config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
+
     raw_events = get_candidate_events(config)
     events = filter_events(raw_events, config)
 
     if not raw_events:
         print("ERROR: no target-title events were fetched. Calendar was not updated.", file=sys.stderr)
+        return 1
+
+    if not events:
+        print("ERROR: target-title events were found, but all were removed by filters. Calendar was not updated.", file=sys.stderr)
         return 1
 
     output = Path(config["output_file"])
