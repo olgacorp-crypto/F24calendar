@@ -1,0 +1,27 @@
+club_name: "FITNESS 24 Приморский"
+schedule_url: "https://fitnessclub24.ru/clubs/primorskiy/schedule/"
+club_timezone: "Europe/Moscow"
+# Set to true if you want iOS to show the website times as-is even when the phone is in another timezone.
+floating_times: false
+lookahead_weeks: 2
+output_file: "public/fitness24-primorskiy.ics"
+calendar_name: "FITNESS 24 Приморский — выбранные занятия"
+source_url: "https://fitnessclub24.ru/clubs/primorskiy/schedule/"
+reminder_hours_before: 3
+exclude:
+  paid: true
+  children: true
+  cancelled: true
+allowed_titles:
+  - "ЗДОРОВАЯ СПИНА"
+  - "ZUMBA"
+  - "PILATES"
+  - "OUTDOOR «RUNNING»"
+  - "STRETCH MOBILITY"
+  - "FIT BALL"
+  - "SPINNING START"
+  - "ДЫХАТЕЛЬНАЯ ГИМНАСТИКА"
+  - "BELLY DANCE"
+  - "STRETCHING"
+  - "СУСТАВНАЯ ГИМНАСТИКА"
+  - "DANCE MIX."
