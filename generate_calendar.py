@@ -5,6 +5,7 @@ import datetime as dt
 import hashlib
 import re
 import sys
+import socket
 import unicodedata
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -13,6 +14,14 @@ from urllib.parse import urlencode
 from zoneinfo import ZoneInfo
 
 import requests
+from urllib3.util import connection as urllib3_connection
+
+
+def force_ipv4_for_requests() -> None:
+    urllib3_connection.allowed_gai_family = lambda: socket.AF_INET
+
+
+force_ipv4_for_requests()
 import yaml
 from bs4 import BeautifulSoup
 
@@ -408,8 +417,12 @@ def main() -> int:
 
     config_path = Path(args.config)
     config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
-    raw_events = get_candidate_events(config)
+       raw_events = get_candidate_events(config)
     events = filter_events(raw_events, config)
+
+    if not raw_events:
+        print("ERROR: no target-title events were fetched. Calendar was not updated.", file=sys.stderr)
+        return 1
 
     output = Path(config["output_file"])
     output.parent.mkdir(parents=True, exist_ok=True)
