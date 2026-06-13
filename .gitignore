@@ -1,0 +1,4 @@
+﻿.venv/
+schedule-debug.html
+__pycache__/
+*.pyc

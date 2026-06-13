@@ -1,13 +1,14 @@
 club_name: "FITNESS 24 Приморский"
 schedule_url: "https://fitnessclub24.ru/clubs/primorskiy/schedule/"
 club_timezone: "Europe/Moscow"
-# Set to true if you want iOS to show the website times as-is even when the phone is in another timezone.
-floating_times: false
 lookahead_weeks: 2
 output_file: "public/fitness24-primorskiy.ics"
 calendar_name: "FITNESS 24 Приморский — выбранные занятия"
 source_url: "https://fitnessclub24.ru/clubs/primorskiy/schedule/"
 reminder_hours_before: 3
+default_duration_minutes: 50
+request_timeout_seconds: 25
+request_retries: 2
 exclude:
   paid: true
   children: true
@@ -24,4 +25,4 @@ allowed_titles:
   - "BELLY DANCE"
   - "STRETCHING"
   - "СУСТАВНАЯ ГИМНАСТИКА"
-  - "DANCE MIX."
+  - "DANCE MIX"

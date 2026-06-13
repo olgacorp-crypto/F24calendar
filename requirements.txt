@@ -1,3 +1,4 @@
 beautifulsoup4==4.12.3
 requests==2.32.3
 PyYAML==6.0.2
+tzdata>=2025.2
