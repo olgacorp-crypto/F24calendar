@@ -9,14 +9,14 @@ X-WR-TIMEZONE:Europe/Moscow
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
-UID:fitness24-6b4127a81b644ecc12@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+UID:fitness24-eda2e082006c2c8aa6@fitness24-calendar.local
+DTSTAMP:20260803T192229Z
 SUMMARY:Pilates
-DTSTART:20260727T080000Z
-DTEND:20260727T085000Z
+DTSTART:20260803T070000Z
+DTEND:20260803T075000Z
 LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Мила Вол
- кова\nЗал/место: Зал программ "Разумное т
+DESCRIPTION:FITNESS 24 Приморский\nТренер: Дарья Се
+ реда\nЗал/место: Зал программ "Разумное т
  ело"\nИсточник: https://fitnessclub24.ru/clubs/primorskiy/sched
  ule/
 URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
@@ -27,810 +27,26 @@ TRIGGER:-PT3H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:fitness24-4c7018194a0b41356f@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Flex Release
-DTSTART:20260727T090000Z
-DTEND:20260727T095000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Мила Вол
- кова\nЗал/место: Зал программ "Разумное т
- ело"\nИсточник: https://fitnessclub24.ru/clubs/primorskiy/sched
- ule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Flex Release
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-29be49afc90ef8d675@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Здоровая спина
-DTSTART:20260727T160000Z
-DTEND:20260727T165000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Виталий 
- Валгонен\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Здоровая спина
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-afd9790fd32252411f@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Zumba
-DTSTART:20260727T170000Z
-DTEND:20260727T175000Z
-LOCATION:Зал основных фитнес-направлений
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Диана См
- ирнова\nЗал/место: Зал основных фитнес-на
- правлений\nИсточник: https://fitnessclub24.ru/clubs/primo
- rskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Zumba
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-86bf48b8b290cc6cda@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Дыхательная гимнастика
-DTSTART:20260727T170000Z
-DTEND:20260727T174500Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Виталий 
- Валгонен\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Дыхательная гимнастика
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-144aa3a6fdc23dd39e@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Outdoor «Running»
-DTSTART:20260728T063000Z
-DTEND:20260728T072000Z
-LOCATION:Парк 300-летия СПб
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Анастаси
- я Ледуховская\nЗал/место: Парк 300-летия СП
- б\nИсточник: https://fitnessclub24.ru/clubs/primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Outdoor «Running»
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-56e4e5465ff0be3b3a@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Fit Ball
-DTSTART:20260728T080000Z
-DTEND:20260728T085000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Татьяна 
- Аристова\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Fit Ball
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-8e62fbf41f3aa343db@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Zumba
-DTSTART:20260728T080000Z
-DTEND:20260728T085000Z
-LOCATION:Зал основных фитнес-направлений
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Диана См
- ирнова\nЗал/место: Зал основных фитнес-на
- правлений\nИсточник: https://fitnessclub24.ru/clubs/primo
- rskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Zumba
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-6b4c48ff73fb60ec3f@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Spinning Start
-DTSTART:20260728T090000Z
-DTEND:20260728T094500Z
-LOCATION:Зона FT
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Анастаси
- я Ледуховская\nЗал/место: Зона FT\nИсточни
- к: https://fitnessclub24.ru/clubs/primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Spinning Start
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-e567004100427267f7@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Stretching
-DTSTART:20260728T090000Z
-DTEND:20260728T095000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Татьяна 
- Аристова\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Stretching
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-ef507d78f0064d6a2b@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Body Rehab
-DTSTART:20260728T150000Z
-DTEND:20260728T155000Z
-LOCATION:Зал основных фитнес-направлений
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Анжела Ч
- ивчи-Баши\nЗал/место: Зал основных фитнес
- -направлений\nИсточник: https://fitnessclub24.ru/clubs/
- primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Body Rehab
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-0aecc355bedaea4746@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Fit Ball
-DTSTART:20260728T160000Z
-DTEND:20260728T165000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Анжела Ч
- ивчи-Баши\nЗал/место: Зал программ "Разум
- ное тело"\nИсточник: https://fitnessclub24.ru/clubs/primors
- kiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Fit Ball
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-b5e0bcc2647a6e6dbb@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Spinning Start
-DTSTART:20260728T160000Z
-DTEND:20260728T164500Z
-LOCATION:Зона FT
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Любовь Н
- етребина\nЗал/место: Зона FT\nИсточник: https:
- //fitnessclub24.ru/clubs/primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Spinning Start
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-54dd1810d0863eeed8@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Pilates
-DTSTART:20260728T173000Z
-DTEND:20260728T182000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Елена Ве
- тохина\nЗал/место: Зал программ "Разумное
-  тело"\nИсточник: https://fitnessclub24.ru/clubs/primorskiy/sc
- hedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Pilates
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-bed6cbf112b492a58c@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Hatha Yoga
-DTSTART:20260728T183000Z
-DTEND:20260728T192500Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Елена Ве
- тохина\nЗал/место: Зал программ "Разумное
-  тело"\nИсточник: https://fitnessclub24.ru/clubs/primorskiy/sc
- hedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Hatha Yoga
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-a9e398008b30b9dd5c@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Дыхательная гимнастика
-DTSTART:20260729T061500Z
-DTEND:20260729T070000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Виталий 
- Валгонен\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Дыхательная гимнастика
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-dc9e0d221877fdfe47@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Spinning Start
-DTSTART:20260729T070000Z
-DTEND:20260729T074500Z
-LOCATION:Зона FT
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Екатерин
- а Рыбальченко\nЗал/место: Зона FT\nИсточни
- к: https://fitnessclub24.ru/clubs/primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Spinning Start
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-2b5b3e6f1e82b8e76a@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Здоровая спина
-DTSTART:20260729T070000Z
-DTEND:20260729T075000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Виталий 
- Валгонен\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Здоровая спина
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-5993a80fab902a61de@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Flex +
-DTSTART:20260729T090000Z
-DTEND:20260729T095000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Екатерин
- а Рыбальченко\nЗал/место: Зал программ "Р
- азумное тело"\nИсточник: https://fitnessclub24.ru/clubs
- /primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Flex +
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-82f4ed93a23ab4bbb9@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Belly dance
-DTSTART:20260729T160000Z
-DTEND:20260729T165000Z
-LOCATION:Зал основных фитнес-направлений
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Екатерин
- а Дворецкая\nЗал/место: Зал основных фитн
- ес-направлений\nИсточник: https://fitnessclub24.ru/cl
- ubs/primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Belly dance
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-ba1c2c7db0d463d4c4@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Flex Release
-DTSTART:20260729T160000Z
-DTEND:20260729T165000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Анжела Ч
- ивчи-Баши\nЗал/место: Зал программ "Разум
- ное тело"\nИсточник: https://fitnessclub24.ru/clubs/primors
- kiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Flex Release
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-cdd25ad99f9f0dbefe@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Pilates
-DTSTART:20260729T170000Z
-DTEND:20260729T175000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Анжела Ч
- ивчи-Баши\nЗал/место: Зал программ "Разум
- ное тело"\nИсточник: https://fitnessclub24.ru/clubs/primors
- kiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Pilates
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-fd3e1e7924211821e2@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Fit Ball
-DTSTART:20260730T070000Z
-DTEND:20260730T075000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Елена Ве
- тохина\nЗал/место: Зал программ "Разумное
-  тело"\nИсточник: https://fitnessclub24.ru/clubs/primorskiy/sc
- hedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Fit Ball
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-f59f36680d2e3ec38d@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Pilates
-DTSTART:20260730T090000Z
-DTEND:20260730T095000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Елена Ве
- тохина\nЗал/место: Зал программ "Разумное
-  тело"\nИсточник: https://fitnessclub24.ru/clubs/primorskiy/sc
- hedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Pilates
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-cd3a5dc75223cc2e66@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Fit Ball
-DTSTART:20260730T150000Z
-DTEND:20260730T155000Z
-LOCATION:Зал основных фитнес-направлений
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Татьяна 
- Аристова\nЗал/место: Зал основных фитнес-
- направлений\nИсточник: https://fitnessclub24.ru/clubs/p
- rimorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Fit Ball
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-2a8830269e0bb09fd8@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Outdoor «Running»
-DTSTART:20260730T160000Z
-DTEND:20260730T165000Z
-LOCATION:Парк 300-летия СПб
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Любовь Н
- етребина\nЗал/место: Парк 300-летия СПб\nИс
- точник: https://fitnessclub24.ru/clubs/primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Outdoor «Running»
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-2af7c0cfcc1e94c6d8@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Здоровая спина
-DTSTART:20260730T160000Z
-DTEND:20260730T165000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Татьяна 
- Аристова\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Здоровая спина
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-55539c096b6cb384de@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Spinning Start
-DTSTART:20260730T170000Z
-DTEND:20260730T174500Z
-LOCATION:Зона FT
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Диана Пл
- оских\nЗал/место: Зона FT\nИсточник: https://fitn
- essclub24.ru/clubs/primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Spinning Start
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-370943bacda2ae6113@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+UID:fitness24-b130c5b40492c6c696@fitness24-calendar.local
+DTSTAMP:20260803T192229Z
 SUMMARY:Yoga Iyengar
-DTSTART:20260731T070000Z
-DTEND:20260731T075000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Виталий 
- Валгонен\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Yoga Iyengar
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-7089c05c248e0b6aa1@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Belly dance
-DTSTART:20260731T080000Z
-DTEND:20260731T085500Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Екатерин
- а Дворецкая\nЗал/место: Зал программ "Раз
- умное тело"\nИсточник: https://fitnessclub24.ru/clubs/pri
- morskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Belly dance
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-71fc37bf614627bad0@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Здоровая спина
-DTSTART:20260731T080000Z
-DTEND:20260731T085000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Виталий 
- Валгонен\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Здоровая спина
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-d970634bfe0e79b0c3@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Stretching
-DTSTART:20260731T090000Z
-DTEND:20260731T095000Z
-LOCATION:Зал основных фитнес-направлений
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Екатерин
- а Дворецкая\nЗал/место: Зал основных фитн
- ес-направлений\nИсточник: https://fitnessclub24.ru/cl
- ubs/primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Stretching
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-7d8d0650e37b0e2b82@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Здоровая спина
-DTSTART:20260731T150000Z
-DTEND:20260731T155000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Виталий 
- Валгонен\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Здоровая спина
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-fe203c6f3a974ef286@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Dance mix
-DTSTART:20260731T160000Z
-DTEND:20260731T165000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Виталий 
- Валгонен\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Dance mix
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-9257bfab4f583c7a19@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Hatha Yoga
-DTSTART:20260731T170000Z
-DTEND:20260731T175500Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Виталий 
- Валгонен\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Hatha Yoga
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-b94cb0cc67522d1bd8@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Stretching
-DTSTART:20260731T170000Z
-DTEND:20260731T175000Z
-LOCATION:Зал основных фитнес-направлений
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Елена Ве
- тохина\nЗал/место: Зал основных фитнес-на
- правлений\nИсточник: https://fitnessclub24.ru/clubs/primo
- rskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Stretching
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-2eb709fb98845b56ed@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Lady's style
-DTSTART:20260801T080000Z
-DTEND:20260801T090000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Екатерин
- а Дворецкая\nЗал/место: Зал программ "Раз
- умное тело"\nИсточник: https://fitnessclub24.ru/clubs/pri
- morskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Lady's style
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-8bb1d573ac33606027@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Flex Release
-DTSTART:20260801T090000Z
-DTEND:20260801T095000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Татьяна 
- Аристова\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Flex Release
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-33e94caafdc346176f@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Spinning Start
-DTSTART:20260801T090000Z
-DTEND:20260801T094500Z
-LOCATION:Зона FT
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Диана Пл
- оских\nЗал/место: Зона FT\nИсточник: https://fitn
- essclub24.ru/clubs/primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Spinning Start
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-abb568d28b315edc8f@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Stretching
-DTSTART:20260801T090000Z
-DTEND:20260801T095000Z
-LOCATION:Зал основных фитнес-направлений
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Екатерин
- а Дворецкая\nЗал/место: Зал основных фитн
- ес-направлений\nИсточник: https://fitnessclub24.ru/cl
- ubs/primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Stretching
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-8f84bec1350090df64@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Здоровая спина
-DTSTART:20260801T100000Z
-DTEND:20260801T105000Z
-LOCATION:Зона FT
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Татьяна 
- Аристова\nЗал/место: Зона FT\nИсточник: https:
- //fitnessclub24.ru/clubs/primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Здоровая спина
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-d941686aea58504ec9@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Здоровая спина
-DTSTART:20260802T080000Z
-DTEND:20260802T085500Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Виталий 
- Валгонен\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Здоровая спина
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-68760db5e3a44939f0@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Yoga Iyengar
-DTSTART:20260802T090000Z
-DTEND:20260802T095500Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Виталий 
- Валгонен\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Yoga Iyengar
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-f5997e3e85945e28c4@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Stretching
-DTSTART:20260802T100000Z
-DTEND:20260802T105000Z
-LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Татьяна 
- Аристова\nЗал/место: Зал программ "Разумн
- ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
- y/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Stretching
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-651212a1a3d37d41b8@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Zumba
-DTSTART:20260802T100000Z
-DTEND:20260802T105000Z
-LOCATION:Зал основных фитнес-направлений
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Диана См
- ирнова\nЗал/место: Зал основных фитнес-на
- правлений\nИсточник: https://fitnessclub24.ru/clubs/primo
- rskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Zumba
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:fitness24-1001c91ab7a490e59b@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Pilates
 DTSTART:20260803T080000Z
 DTEND:20260803T085000Z
 LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Мила Вол
- кова\nЗал/место: Зал программ "Разумное т
+DESCRIPTION:FITNESS 24 Приморский\nТренер: Дарья Се
+ реда\nЗал/место: Зал программ "Разумное т
  ело"\nИсточник: https://fitnessclub24.ru/clubs/primorskiy/sched
  ule/
 URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Pilates
+DESCRIPTION:Yoga Iyengar
 TRIGGER:-PT3H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-f4fbd55cc97a27050a@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Flex Release
 DTSTART:20260803T090000Z
 DTEND:20260803T095000Z
@@ -848,7 +64,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-4b50ec3a8911a98dbc@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Здоровая спина
 DTSTART:20260803T160000Z
 DTEND:20260803T165000Z
@@ -866,7 +82,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-8077f8d9630aa7158a@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Zumba
 DTSTART:20260803T170000Z
 DTEND:20260803T175000Z
@@ -884,7 +100,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-95060ff4377c96149b@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Дыхательная гимнастика
 DTSTART:20260803T170000Z
 DTEND:20260803T174500Z
@@ -902,7 +118,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-f100b10b2046c8e9d1@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Outdoor «Running»
 DTSTART:20260804T063000Z
 DTEND:20260804T072000Z
@@ -919,7 +135,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-391520edd2a8033301@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Fit Ball
 DTSTART:20260804T080000Z
 DTEND:20260804T085000Z
@@ -937,7 +153,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-2a31cf4895de0b4b59@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Zumba
 DTSTART:20260804T080000Z
 DTEND:20260804T085000Z
@@ -955,7 +171,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-bcdc841e9c342195e0@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:STRETCH MOBILITY
 DTSTART:20260804T090000Z
 DTEND:20260804T095000Z
@@ -973,7 +189,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-102d3f691bbcdce6bf@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Spinning Start
 DTSTART:20260804T090000Z
 DTEND:20260804T094500Z
@@ -989,34 +205,34 @@ TRIGGER:-PT3H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:fitness24-3c28127c5121992108@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Body Rehab
+UID:fitness24-3f597d27c3009604be@fitness24-calendar.local
+DTSTAMP:20260803T192229Z
+SUMMARY:Здоровая спина
 DTSTART:20260804T150000Z
 DTEND:20260804T155000Z
 LOCATION:Зал основных фитнес-направлений
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Анжела Ч
- ивчи-Баши\nЗал/место: Зал основных фитнес
- -направлений\nИсточник: https://fitnessclub24.ru/clubs/
- primorskiy/schedule/
+DESCRIPTION:FITNESS 24 Приморский\nТренер: Татьяна 
+ Аристова\nЗал/место: Зал основных фитнес-
+ направлений\nИсточник: https://fitnessclub24.ru/clubs/p
+ rimorskiy/schedule/
 URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Body Rehab
+DESCRIPTION:Здоровая спина
 TRIGGER:-PT3H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-346dce2fd5ccf08221@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Fit Ball
 DTSTART:20260804T160000Z
 DTEND:20260804T165000Z
 LOCATION:Зал программ "Разумное тело"
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Анжела Ч
- ивчи-Баши\nЗал/место: Зал программ "Разум
- ное тело"\nИсточник: https://fitnessclub24.ru/clubs/primors
- kiy/schedule/
+DESCRIPTION:FITNESS 24 Приморский\nТренер: Татьяна 
+ Аристова\nЗал/место: Зал программ "Разумн
+ ое тело"\nИсточник: https://fitnessclub24.ru/clubs/primorski
+ y/schedule/
 URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -1026,7 +242,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-4ae806bde9c521fa29@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Pilates
 DTSTART:20260804T173000Z
 DTEND:20260804T182000Z
@@ -1044,7 +260,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-ceb1553bec29d7bb65@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Yoga Iyengar
 DTSTART:20260804T183000Z
 DTEND:20260804T192500Z
@@ -1062,7 +278,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-dff67b57f5df5a7d3b@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Дыхательная гимнастика
 DTSTART:20260805T061500Z
 DTEND:20260805T070000Z
@@ -1079,25 +295,8 @@ TRIGGER:-PT3H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:fitness24-f4deddedc74a3497dc@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Spinning Start
-DTSTART:20260805T070000Z
-DTEND:20260805T074500Z
-LOCATION:Зона FT
-DESCRIPTION:FITNESS 24 Приморский\nТренер: Екатерин
- а Рыбальченко\nЗал/место: Зона FT\nИсточни
- к: https://fitnessclub24.ru/clubs/primorskiy/schedule/
-URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Spinning Start
-TRIGGER:-PT3H
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:fitness24-b1a4bb6f0b73ede648@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Здоровая спина
 DTSTART:20260805T070000Z
 DTEND:20260805T075000Z
@@ -1115,7 +314,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-e9b73df035d23693dc@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Flex +
 DTSTART:20260805T090000Z
 DTEND:20260805T095000Z
@@ -1133,7 +332,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-26bc371bf81e1cb627@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Belly dance
 DTSTART:20260805T160000Z
 DTEND:20260805T165000Z
@@ -1151,7 +350,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-36abae00eff600ac2f@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Flex Release
 DTSTART:20260805T160000Z
 DTEND:20260805T165000Z
@@ -1169,7 +368,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-2b3a3501d614054fd1@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Pilates
 DTSTART:20260805T170000Z
 DTEND:20260805T175000Z
@@ -1187,7 +386,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-f9b290006b24000d4e@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Fit Ball
 DTSTART:20260806T070000Z
 DTEND:20260806T075000Z
@@ -1205,7 +404,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-dd778c6168182ffa21@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Pilates
 DTSTART:20260806T090000Z
 DTEND:20260806T095000Z
@@ -1223,7 +422,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-b4058d551455697ffa@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Fit Ball
 DTSTART:20260806T150000Z
 DTEND:20260806T155000Z
@@ -1241,7 +440,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-273e9233ed17aba256@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Outdoor «Running»
 DTSTART:20260806T160000Z
 DTEND:20260806T165000Z
@@ -1258,7 +457,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-ad69a9dab6ac9aa338@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Здоровая спина
 DTSTART:20260806T160000Z
 DTEND:20260806T165000Z
@@ -1276,7 +475,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-062690762c41fa5b8b@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Spinning Start
 DTSTART:20260806T170000Z
 DTEND:20260806T174500Z
@@ -1293,7 +492,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-177f299e3007c37552@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Yoga Iyengar
 DTSTART:20260806T173000Z
 DTEND:20260806T182000Z
@@ -1310,9 +509,9 @@ TRIGGER:-PT3H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:fitness24-57662b6790a6f34654@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
-SUMMARY:Yoga Iyengar
+UID:fitness24-e24d3d803d7eb3cbee@fitness24-calendar.local
+DTSTAMP:20260803T192229Z
+SUMMARY:Pilates
 DTSTART:20260807T070000Z
 DTEND:20260807T075000Z
 LOCATION:Зал программ "Разумное тело"
@@ -1323,13 +522,13 @@ DESCRIPTION:FITNESS 24 Приморский\nТренер: Дарья Се
 URL:https://fitnessclub24.ru/clubs/primorskiy/schedule/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Yoga Iyengar
+DESCRIPTION:Pilates
 TRIGGER:-PT3H
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-1878ad3f147cf0754e@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Belly dance
 DTSTART:20260807T080000Z
 DTEND:20260807T085500Z
@@ -1347,7 +546,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-7db54aa9211fd0d90a@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Здоровая спина
 DTSTART:20260807T080000Z
 DTEND:20260807T085000Z
@@ -1365,7 +564,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-5657c02260ef5ebb8b@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Stretching
 DTSTART:20260807T090000Z
 DTEND:20260807T095000Z
@@ -1383,7 +582,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-f514941b892f558970@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Здоровая спина
 DTSTART:20260807T150000Z
 DTEND:20260807T155000Z
@@ -1401,7 +600,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-3bada5c10217d183de@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Dance mix
 DTSTART:20260807T160000Z
 DTEND:20260807T165000Z
@@ -1419,7 +618,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-67ed4476595b71167f@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Hatha Yoga
 DTSTART:20260807T170000Z
 DTEND:20260807T175500Z
@@ -1437,7 +636,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-03424a27d61982fb0a@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Stretching
 DTSTART:20260807T170000Z
 DTEND:20260807T175000Z
@@ -1455,7 +654,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-2491caa6a2eb7b6030@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Lady's style
 DTSTART:20260808T080000Z
 DTEND:20260808T090000Z
@@ -1473,7 +672,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-4c510fe9348d0a954b@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Flex Release
 DTSTART:20260808T090000Z
 DTEND:20260808T095000Z
@@ -1491,7 +690,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-f64f7a26ae29a26946@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Stretching
 DTSTART:20260808T090000Z
 DTEND:20260808T095000Z
@@ -1509,7 +708,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-bca33a7a1691815e32@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Pilates
 DTSTART:20260808T100000Z
 DTEND:20260808T105000Z
@@ -1526,7 +725,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-30ddee261dbd573d85@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Здоровая спина
 DTSTART:20260809T080000Z
 DTEND:20260809T085500Z
@@ -1544,7 +743,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-0ed818e8fb84705972@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Yoga Iyengar
 DTSTART:20260809T090000Z
 DTEND:20260809T095500Z
@@ -1562,7 +761,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-4b332e4539d48b9087@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Stretching
 DTSTART:20260809T100000Z
 DTEND:20260809T105000Z
@@ -1580,7 +779,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:fitness24-e32e6e33e5964e4932@fitness24-calendar.local
-DTSTAMP:20260730T081231Z
+DTSTAMP:20260803T192229Z
 SUMMARY:Zumba
 DTSTART:20260809T100000Z
 DTEND:20260809T105000Z
